@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "openrelik-worker-TEMPLATE-WORKER-NAME"
+name = "openrelik-worker-ssdeep"
 version = "0.1.0"
-description = "Description of the worker"
-authors = ["YOUR NAME <email@example.com>"]
+description = "OpenRelik worker to calculate SSDeep (context-triggered piecewise hashes) for files."
+authors = ["Alexander Jaeger <mail@alexanderjaeger.de>"]
 readme = "README.md"
 package-mode = false
 
