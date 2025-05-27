@@ -33,6 +33,10 @@ RUN poetry install --no-interaction --no-ansi
 # Copy files needed to build
 COPY . ./
 
+# Install ssdeep CLI tool
+RUN apt-get update && apt-get install -y ssdeep \
+    && rm -rf /var/lib/apt/lists/*
+
 # Install the worker and set environment to use the correct python interpreter.
 RUN poetry install && rm -rf $POETRY_CACHE_DIR
 ENV VIRTUAL_ENV=/app/.venv PATH="/openrelik/.venv/bin:$PATH"
